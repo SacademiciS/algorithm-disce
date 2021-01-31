@@ -1,4 +1,4 @@
-package com.algorithm.disce.sort.bubble;
+package com.algorithm.disce.sort.comparison;
 
 import java.util.Arrays;
 

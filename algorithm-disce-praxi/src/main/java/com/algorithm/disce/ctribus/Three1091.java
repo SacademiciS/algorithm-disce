@@ -28,6 +28,8 @@ public class Three1091 {
                 int y = node.y + d[1];
                 if (x == n - 1 && y == n - 1) return step + 1;
                 if (!isVail(x, y, n)) continue;
+                //为什么要判断走过的点step小于当前step要跳过，因为当前题目是要寻找到终点最优值
+                //而当前遍历到的点走的步数比之前的走到过步数更大，说明当前走法并不是最好的，直接忽略这种走法
                 if (grid[x][y] != 0 && grid[x][y] <= step + 1) continue;
                 Node next = new Node(x, y, grid[x][y] = step + 1);
                 queue.offer(next);
