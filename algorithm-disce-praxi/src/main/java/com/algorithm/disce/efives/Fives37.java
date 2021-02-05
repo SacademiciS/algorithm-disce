@@ -47,17 +47,16 @@ public class Fives37 {
         int row = space[0];
         int col = space[1];
         for (int i = 1; i <= 9 && !valid; i++) {
-            if (check(rows[row], i) || check(cols[col], i) || check(box[row / 3][col / 3], i)) {
-                continue;
+            if ((rows[row] & (1 << i)) == 0 && (cols[col] & (1 << i)) == 0 && (box[row / 3][col / 3] & (1 << i)) == 0) {
+                rows[row] = stateAddition(rows[row], i);
+                cols[col] = stateAddition(cols[col], i);
+                box[row / 3][col / 3] = stateAddition(box[row / 3][col / 3], i);
+                board[row][col] = (char) ('0' + i);
+                dfs(index + 1, spaceList, board);
+                rows[row] = stateAddition(rows[row], i);
+                cols[col] = stateAddition(cols[col], i);
+                box[row / 3][col / 3] = stateAddition(box[row / 3][col / 3], i);
             }
-            rows[row] = stateAddition(rows[row], i);
-            cols[col] = stateAddition(cols[col], i);
-            box[row / 3][col / 3] = stateAddition(box[row / 3][col / 3], i);
-            board[row][col] = (char) ('0' + i);
-            dfs(index + 1, spaceList, board);
-            rows[row] = stateAddition(rows[row], i);
-            cols[col] = stateAddition(cols[col], i);
-            box[row / 3][col / 3] = stateAddition(box[row / 3][col / 3], i);
         }
     }
 
@@ -65,7 +64,4 @@ public class Fives37 {
         return val ^ (1 << n);
     }
 
-    private boolean check(int val, int n) {
-        return (val >> n & 1) == 1;
-    }
 }

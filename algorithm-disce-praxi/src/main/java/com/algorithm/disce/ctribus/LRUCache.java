@@ -1,20 +1,15 @@
-package com.algorithm.disce.bduo;
+package com.algorithm.disce.ctribus;
 
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @Author: wjh
- * @Description
- * @Date: 2021/2/1 16:24
- * Copyright (c) 2019 北京新媒传信科技有限公司
- */
 public class LRUCache {
 
     private Map<Integer, DLinkNode> cache = new HashMap<>();
     private int size;
     private int capacity;
-    private DLinkNode head,tail;
+    private DLinkNode head;
+    private DLinkNode tail;
 
     public LRUCache(int capacity) {
         this.size = 0;
@@ -34,13 +29,29 @@ public class LRUCache {
         return node.value;
     }
 
+    private void moveToHead(DLinkNode node) {
+        removeNode(node);
+        addNodeToHead(node);
+    }
+
+    private void addNodeToHead(DLinkNode node) {
+        node.prev = head;
+        node.next = head.next;
+        head.next.prev = node;
+        head.next = node;
+    }
+
+    private void removeNode(DLinkNode node) {
+        node.next.prev = node.prev;
+        node.prev.next = node.next;
+    }
+
     public void put(int key, int value) {
         DLinkNode node = cache.get(key);
         if (node == null) {
             DLinkNode newNode = new DLinkNode(key, value);
             cache.put(key, newNode);
-            //注意！！！ 记得要加入链表
-            addToHead(newNode);
+            addNodeToHead(newNode);
             ++size;
             if (size > capacity) {
                 DLinkNode tail = removeToTail();
@@ -59,27 +70,7 @@ public class LRUCache {
         return node;
     }
 
-    private void moveToHead(DLinkNode node) {
-        removeNode(node);
-        addToHead(node);
-    }
-
-    private void addToHead(DLinkNode node) {
-        node.prev = head;
-        node.next = head.next;
-        //注意！！！
-        //head.next.prev = node 要放在 head.next = node 前面
-        //如果颠倒过来, head.next.prev = node 则会变成 node.prev = node 重复指向自己节点
-        head.next.prev = node;
-        head.next = node;
-    }
-
-    private void removeNode(DLinkNode node) {
-        node.prev.next = node.next;
-        node.next.prev = node.prev;
-    }
-
-    private static class DLinkNode {
+    public static class DLinkNode {
         int key;
         int value;
         DLinkNode prev;
@@ -89,10 +80,9 @@ public class LRUCache {
 
         }
 
-        DLinkNode(Integer key, Integer value) {
+        DLinkNode(int key, int value) {
             this.key = key;
             this.value = value;
         }
     }
-
 }
