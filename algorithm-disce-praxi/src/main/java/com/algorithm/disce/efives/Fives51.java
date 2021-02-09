@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Five51 {
+public class Fives51 {
 
     private int n;
 

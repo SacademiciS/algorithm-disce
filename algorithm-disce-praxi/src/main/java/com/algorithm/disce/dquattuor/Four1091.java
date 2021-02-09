@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.PriorityQueue;
 
-public class Four_1091 {
+public class Four1091 {
 
     private int[][] distance = {{0, 1}, {0, -1}, {1, -1}, {-1, -1}, {-1, 1}, {-1, 0}, {1, 0}, {1, 1}};
 
@@ -85,7 +85,7 @@ public class Four_1091 {
     }
 
     public static void main(String[] args) {
-        Four_1091 f = new Four_1091();
+        Four1091 f = new Four1091();
         int[][] grid = new int[][]{{0, 0, 0}, {1, 1, 0}, {1, 1, 0}};
         System.out.println(f.shortestPathBinaryMatrix(grid));
     }
