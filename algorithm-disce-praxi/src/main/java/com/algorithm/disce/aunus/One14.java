@@ -2,12 +2,6 @@ package com.algorithm.disce.aunus;
 
 import java.util.*;
 
-/**
- * @Author: wjh
- * @Description
- * @Date: 2021/2/9 11:21
- * Copyright (c) 2019 北京新媒传信科技有限公司
- */
 public class One14 {
 
     public String longestCommonPrefix(String[] strs) {

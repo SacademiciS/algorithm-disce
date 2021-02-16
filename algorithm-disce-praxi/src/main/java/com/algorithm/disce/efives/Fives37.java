@@ -3,12 +3,6 @@ package com.algorithm.disce.efives;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @Author: wjh
- * @Description
- * @Date: 2021/2/5 16:24
- * Copyright (c) 2019 北京新媒传信科技有限公司
- */
 public class Fives37 {
 
     private int[] rows;

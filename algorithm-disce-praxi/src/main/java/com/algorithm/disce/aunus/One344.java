@@ -1,11 +1,5 @@
 package com.algorithm.disce.aunus;
 
-/**
- * @Author: wjh
- * @Description
- * @Date: 2021/2/9 14:23
- * Copyright (c) 2019 北京新媒传信科技有限公司
- */
 public class One344 {
 
     public void reverseString(char[] s) {

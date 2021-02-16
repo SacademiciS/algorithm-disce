@@ -1,11 +1,5 @@
 package com.algorithm.disce.dquattuor;
 
-/**
- * @Author: wjh
- * @Description
- * @Date: 2021/2/2 16:45
- * Copyright (c) 2019 北京新媒传信科技有限公司
- */
 public class Four37 {
 
     public void solveSudoku(char[][] board) {

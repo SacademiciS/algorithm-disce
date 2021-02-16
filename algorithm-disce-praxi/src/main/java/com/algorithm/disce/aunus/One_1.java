@@ -1,11 +1,5 @@
 package com.algorithm.disce.aunus;
 
-/**
- * @Author: wjh
- * @Description
- * @Date: 2021/1/26 11:14
- * Copyright (c) 2019 北京新媒传信科技有限公司
- */
 public class One_1 {
 
     public int[] twoSum(int[] nums, int target) {
