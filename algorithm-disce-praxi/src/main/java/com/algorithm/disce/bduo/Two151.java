@@ -1,5 +1,8 @@
 package com.algorithm.disce.bduo;
 
+/**
+ * 双指针法
+ */
 public class Two151 {
     public String reverseWords(String s) {
         s = s.trim();
