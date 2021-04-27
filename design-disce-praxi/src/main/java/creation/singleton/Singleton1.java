@@ -1,4 +1,4 @@
-package singleton;
+package creation.singleton;
 
 /**
  * @Author: wjh
