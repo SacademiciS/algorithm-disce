@@ -1,4 +1,4 @@
-package creation;
+package behavioral;
 
 public class test {
 }
