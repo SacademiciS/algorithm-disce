@@ -1,9 +1,10 @@
 package behavioral.strategy;
 
-import behavioral.strategy.event.MJCouponDiscount;
-import behavioral.strategy.event.NYGCouponDiscount;
-import behavioral.strategy.event.ZJCouponDiscount;
-import behavioral.strategy.event.ZKCouponDiscount;
+import behavioral.strategy.design.Context;
+import behavioral.strategy.design.event.MJCouponDiscount;
+import behavioral.strategy.design.event.NYGCouponDiscount;
+import behavioral.strategy.design.event.ZJCouponDiscount;
+import behavioral.strategy.design.event.ZKCouponDiscount;
 import org.junit.Test;
 
 import java.math.BigDecimal;

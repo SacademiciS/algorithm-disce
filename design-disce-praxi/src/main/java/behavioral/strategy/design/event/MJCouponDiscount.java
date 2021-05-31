@@ -1,6 +1,6 @@
-package behavioral.strategy.event;
+package behavioral.strategy.design.event;
 
-import behavioral.strategy.ICouponDiscount;
+import behavioral.strategy.design.ICouponDiscount;
 
 import java.math.BigDecimal;
 import java.util.Map;
