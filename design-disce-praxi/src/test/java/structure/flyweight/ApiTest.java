@@ -9,7 +9,7 @@ import structure.flyweight.model.Activity;
 
 /**
  * @Author: wjh
- * @Description
+ * @Description 享元模式
  * @Date: 2021/5/31 16:55
  */
 public class ApiTest {
