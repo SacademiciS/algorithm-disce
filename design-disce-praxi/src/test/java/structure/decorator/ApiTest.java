@@ -4,6 +4,7 @@ import org.junit.Test;
 import structure.decorator.design.LoginSsoDecorator;
 import structure.decorator.service.SsoInterceptor;
 
+//装饰者模式
 public class ApiTest {
 
 //    @Test

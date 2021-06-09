@@ -9,6 +9,7 @@ import structure.bridging.design.mode.PayFingerprintMode;
 
 import java.math.BigDecimal;
 
+//桥接模式
 public class ApiTest {
 
 //    @Test

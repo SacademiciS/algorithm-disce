@@ -14,7 +14,7 @@ import structure.flyweight.model.Activity;
  */
 public class ApiTest {
 
-    private Logger logger = LoggerFactory.getLogger(ApiTest.class);
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private ActivityController activityController = new ActivityController();
 

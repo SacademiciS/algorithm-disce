@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Date;
 
+//备忘录模式
 public class ApiTest {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());

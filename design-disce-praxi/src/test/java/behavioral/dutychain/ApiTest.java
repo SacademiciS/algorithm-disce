@@ -16,7 +16,7 @@ import java.util.Date;
 
 /**
  * @Author: wjh
- * @Description
+ * @Description 责任链模式
  * @Date: 2021/6/1 14:25
  */
 public class ApiTest {
