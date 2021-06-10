@@ -1,8 +1,5 @@
 package behavioral.medium.demo;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -10,11 +7,9 @@ import java.sql.Statement;
 
 public class JDBCUtil {
 
-    private static Logger logger = LoggerFactory.getLogger(JDBCUtil.class);
-
-    public static final String URL = "jdbc:mysql://127.0.0.1:3306/itstack_demo_ddd";
+    public static final String URL = "jdbc:mysql://42.194.146.108:3306/itstack-demo-design";
     public static final String USER = "root";
-    public static final String PASSWORD = "123456";
+    public static final String PASSWORD = "root";
 
     public static void main(String[] args) throws Exception {
         //1.加载驱动程序
@@ -26,7 +21,7 @@ public class JDBCUtil {
         ResultSet resultSet = statement.executeQuery("SELECT id, name, age, createTime, updateTime FROM user");
         //如果有数据，rs.next()返回true
         while (resultSet.next()) {
-            logger.info("测试结果 姓名：{} 年龄：{}", resultSet.getString("name"), resultSet.getInt("age"));
+            System.out.println(String.format("测试结果 姓名：%s 年龄：%s", resultSet.getString("name"), resultSet.getInt("age")));
         }
     }
 }

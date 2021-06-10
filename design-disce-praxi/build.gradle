@@ -16,5 +16,10 @@ dependencies {
     implementation group: 'com.alibaba', name: 'fastjson', version: '1.2.75'
     implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.5'
     implementation group: 'org.slf4j', name: 'jcl-over-slf4j', version: '1.7.5'
-    implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.20'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+    implementation group: 'org.apache.directory.studio', name: 'org.apache.commons.codec', version: '1.8'
+    implementation group: 'dom4j', name: 'dom4j', version: '1.6.1'
+    implementation group: 'jaxen', name: 'jaxen', version: '1.1.6'
+    implementation group: 'org.mybatis', name: 'mybatis', version: '3.4.6'
 }
