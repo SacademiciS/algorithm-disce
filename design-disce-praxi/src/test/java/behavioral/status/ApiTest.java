@@ -1,4 +1,4 @@
-package structure.status;
+package behavioral.status;
 
 import behavioral.status.demo.ActivityExecStatusController;
 import behavioral.status.demo.Result;
