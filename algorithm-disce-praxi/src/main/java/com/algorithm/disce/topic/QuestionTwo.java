@@ -15,7 +15,7 @@ public class QuestionTwo {
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             res.append(String.format(mod, entry.getKey(), entry.getValue()));
         }
-        res.deleteCharAt(res.length());
+        res.deleteCharAt(res.length() - 1);
         return res.toString();
     }
 }

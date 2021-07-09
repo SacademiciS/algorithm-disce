@@ -1,4 +1,4 @@
-package com.algorithm.disce.sort.selection;
+package com.algorithm.disce.sort.insertion;
 
 import java.util.Arrays;
 
